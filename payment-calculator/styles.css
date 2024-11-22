@@ -1,0 +1,92 @@
+body {
+  background: url('./images/paycal.png') no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  color: #332014; /* Dark brown for default text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.calculator {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  height: auto;
+  padding-top: 5%;
+}
+
+.input-box, .output-box, .calc-btn {
+  position: absolute;
+  width: 15.5%; /* Increase width for better usability */
+  height: 50%; /* Increased height for usability */
+  border: 0px solid #C49362; /* Medium brown border */
+  text-align: center;
+  font-size: 1rem; /* Adjust font size for better readability */
+  border-radius: 5px;
+  background-color: transparent; /* No background for fields */
+  color: #332014; /* Dark brown for text */
+}
+
+#buildingCost {
+  top: -260%;
+  left: 10%;
+}
+
+#options {
+  top: -200%;
+  left: 10%;
+}
+
+#discount {
+  top: -140%;
+  left: 10%;
+}
+
+#totalCost {
+  top: -77%;
+  left: 10%;
+}
+
+#monthly36 {
+  top: 105%;
+  left: 10%;
+}
+
+#monthly48 {
+  top: 167%;
+  left: 10%;
+}
+
+#monthly60 {
+  top: 225%;
+  left: 10%;
+}
+
+#calculate {
+  top: -22%;
+  left: -116%;
+  color: white; /* White text for button */
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 14px;
+  width: 143%;
+  height: 68%;
+  font-size: 2rem;
+}
+
+@media (max-width: 600px) {
+  .input-box, .output-box, .calc-btn {
+    width: 50%;
+    height: 10%;
+    font-size: 0.8rem;
+  }
+
+  #calculate {
+    width: 100%;
+    height: 10%;
+  }
+}

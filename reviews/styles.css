@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.swiper-container {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    overflow: visible;
+    position: relative;
+}
+
+.swiper-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide {
+    width: 90%;
+    height: 70%;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 5%; /* Add consistent padding */
+}
+
+.review-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative; /* Allow absolute positioning inside */
+}
+
+.reviewer-name {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 25pt; /* Adjusted size */
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 4%; /* Reduced margin */
+    color: inherit; /* Inherit text color */
+}
+
+.review-body {
+    font-family: 'Courier New', Courier, monospace; /* Typewriter-style font */
+    font-size: 30pt; /* Adjusted size */
+    line-height: 1.2; /* Reduced line height */
+    text-align: justify; /* Align text neatly */
+    overflow-wrap: break-word; /* Prevent text overflow */
+    flex-grow: 1; /* Allow the body to take up dynamic space */
+    color: inherit; /* Inherit text color */
+}
+
+/* General Stamp Styling */
+.stamp {
+    position: absolute;
+    bottom: -2%; /* Position stamp in the bottom-right corner */
+    right: -8%; /* Position stamp in the bottom-right corner */
+    width: 35%; /* Scale stamp size */
+    height: 35%; /* Maintain aspect ratio by matching width */
+    background-size: contain; /* Ensure the image fits within the defined size */
+    background-repeat: no-repeat; /* Prevent tiling */
+    background-position: center; /* Center the image within the element */
+    opacity: 1; /* Ensure full visibility */
+}
+
+/* Specific Styles for the Brown Card (Color: #332014) */
+.swiper-slide:nth-child(2) {
+    background-color: #332014; /* Brown card background */
+}
+
+.swiper-slide:nth-child(2) .review-body,
+.swiper-slide:nth-child(2) .reviewer-name {
+    color: #ffffff; /* White text for brown card */
+}
+
+.swiper-slide:nth-child(2) .stamp {
+    background-image: url('./images/blackstamp.png'); /* Custom stamp for brown card */
+}
+
+/* Styles for Other Cards */
+.swiper-slide:not(:nth-child(2)) .review-body,
+.swiper-slide:not(:nth-child(2)) .reviewer-name {
+    color: #000000; /* Black text for other cards */
+}
+
+.swiper-slide:not(:nth-child(2)) .stamp {
+    background-image: url('./images/whitestamp.png'); /* Custom stamp for other cards */
+}
