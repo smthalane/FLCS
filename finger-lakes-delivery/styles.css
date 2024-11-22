@@ -1,0 +1,71 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./images/background.png') no-repeat center center;
+  background-size: cover; /* Ensure the background image fills the screen */
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.postcard {
+  position: relative;
+  width: 1000px; /* Match the postcard size */
+  height: 67.5%; /* Match the postcard height */
+  margin: 50px auto; /* Center the postcard on the page */
+  background: url('./images/your-postcard-background.png') no-repeat center center;
+  background-size: cover; /* Ensure the postcard fills its container */
+  border-radius: 10px;
+  overflow: visible; /* Allow content to extend beyond the postcard boundaries */
+}
+
+/* Map Container - Orange Area */
+.map-container {
+  position: absolute;
+  top: 87%; /* Adjusted to fine-tune alignment in the orange area */
+  left: 26%; /* Adjusted to fine-tune alignment */
+  width: 19%; /* Width of the orange area */
+  height: 45%; /* Height of the orange area */
+  border: 2px solid #332014;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+/* Address Bar - Purple Area */
+.address-bar {
+  position: absolute;
+  top: 108%; /* Adjusted to fine-tune alignment in the purple area */
+  left:49%; /* Adjusted to fine-tune alignment */
+  width: 18%; /* Width of the purple area */
+  padding: 15px;
+  text-align: center;
+}
+
+.address-bar input {
+  width: 84%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.address-bar button {
+  width: 96%;
+  padding: 8px;
+  background-color: #332014;
+  color: #f9e8c9;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.address-bar button:hover {
+  background-color: #c49362;
+  color: #332014;
+}

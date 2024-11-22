@@ -1,0 +1,33 @@
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #F9E8C9; /* Matches brand's lightest color */
+}
+
+/* Map container styles */
+.map-container {
+  width: 100%; /* Full width of the page */
+  margin: 0 auto; /* Center the map */
+  position: relative; /* Enable positioning for overlays */
+  height: 100vh; /* Fill the entire viewport height */
+}
+
+iframe {
+  width: 100%; /* Full width */
+  height: 100%; /* Full height of the container */
+  border: none;
+}
+
+/* Sepia overlay for the top bar only */
+.top-bar-sepia-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* Match the height of the green bar */
+  background-color: rgba(112, 66, 20, 0.4); /* Sepia tone with slight transparency */
+  z-index: 10; /* Ensure it stays above the iframe */
+  pointer-events: none; /* Allow interaction with the buttons underneath */
+}
